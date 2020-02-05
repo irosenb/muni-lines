@@ -72,6 +72,21 @@ class App extends React.Component {
             map.setPaintProperty(this.state.selected_line, 'line-color', '#B70120')
 
             this.setState({selected_line: element.id})
+            map.removeLayer(element.id);
+
+            map.addLayer({
+              'id': element.id,
+              "type": "line",
+              'source': element.id,
+              'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+              },
+              'paint': {
+                'line-color': '#B70120',
+                'line-width': 3
+              }
+            });
 
             map.setPaintProperty(element.id, 'line-color', 'orange')
 
