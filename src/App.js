@@ -83,12 +83,10 @@ class App extends React.Component {
                 'line-cap': 'round'
               },
               'paint': {
-                'line-color': '#B70120',
+                'line-color': 'orange',
                 'line-width': 3
               }
             });
-
-            map.setPaintProperty(element.id, 'line-color', 'orange')
 
             console.log(e.features[0]);
 
