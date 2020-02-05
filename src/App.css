@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.mapContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.route {
+  background: #000000;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border: 1px solid #979797;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.route h3 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.route ul {
+  height: 200px;
+  list-style: none;
+  overflow: auto;
+}
+.route li {
+  color: white;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.route li span {
+  border-radius: 50%;
+  padding: 2px 10px;
+  margin-right: 10px;
+  background: #fff;
+}
+
+.route li span:before {
+  position: absolute;
+  content: '';
+  border-left: 1px solid white;
+  /* left: 14px; */
+  bottom: 0;
+  height: 100%;
 }
